@@ -16,24 +16,24 @@ display_download_help() {
 
 while getopts ":f:d:b:" opt; do
   case ${opt} in
-		f )
-		  ContentFileFullPath=$OPTARG
-		  echo $ContentFileFullPath
-		  ;;
-		d )
-		  DestFolder=$OPTARG
-		  echo $DestFolder
-		  ;;
-		b )
-		  S3BucketName=$OPTARG
-		  echo $S3BucketName
-		  ;;
-   \? )
-		   display_download_help
-		  ;;
-		: )
-		  echo "Invalid option: $OPTARG requires an argument" 1>&2
-		  ;;
+	f )
+	  ContentFileFullPath=$OPTARG
+	  echo $ContentFileFullPath
+	  ;;
+	d )
+	  DestFolder=$OPTARG
+	  echo $DestFolder
+	  ;;
+	b )
+	  S3BucketName=$OPTARG
+	  echo $S3BucketName
+	  ;;
+       \? )
+	   display_download_help
+	  ;;
+	: )
+	  echo "Invalid option: $OPTARG requires an argument" 1>&2
+	  ;;
   esac
 done
 
